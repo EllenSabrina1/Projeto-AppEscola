@@ -1,0 +1,92 @@
+﻿<Window x:Class="AppEscolaa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppEscolaa"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Normal">
+    <Grid>
+        <Grid Background="#FFFDCF">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Border CornerRadius="25">
+                    <Border.Background >
+                        <LinearGradientBrush EndPoint="0.2,1" StartPoint="0.2,0">
+                            <GradientStop Color = "White"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Image Source="/Recursos/imagens/escola.jpg" 
+Width="50" Height="50"
+Margin="0,0,0,230" HorizontalAlignment="Center">
+                    </Image>
+                </Border>
+                <TextBlock Text="ACESSAR" FontSize="20" Margin="85,70" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock  Margin="0, 110" HorizontalAlignment="Center" TextAlignment="Center" >Entre com seus dados coerretamente para <LineBreak /> acessar o sitema!</TextBlock>
+
+                <StackPanel Margin="0 150 0 10" Orientation="Vertical">
+                    <WrapPanel Width="233" Margin="4 0 10 18">
+
+                        <Grid Margin="7 2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Width="220" Height="25" BorderBrush="Black" Text="Email" Foreground="#FFE0E0E0" >
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="8">
+                                        </Setter>
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+                        </Grid>
+                    </WrapPanel>
+
+                    <WrapPanel Width="230" >
+                        <Grid Margin=" 2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Width="220" Height="25" BorderBrush="Black" Text="Senha" Foreground="#FFD8D8D8">
+                                <TextBox.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="8">
+                                        </Setter>
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+                        </Grid>
+                    </WrapPanel>
+                    <Label Content="Esqueceu a senha?" Width="163" Margin="8 0 100 2"/>
+
+
+                    <Button Content="Entrar" FontSize="15" 
+ Background="#F4E9FF" 
+     Padding="5" Margin="8 0 2 7" Width="100" Height="35" Click="Button_Click">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="18" />
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

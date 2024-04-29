@@ -1,0 +1,37 @@
+﻿<Window x:Class="AppEscolaa.Telas.ConsultaEscola"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppEscolaa.Telas"
+        mc:Ignorable="d"
+        Title="ConsultaEscola" Height="450" Width="800"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Normal">
+    <Grid Background="#FFFDCF">
+        <TextBlock Text="Visualizar Escola"
+   FontSize="35" 
+   HorizontalAlignment="Center" Margin="0 10 0 40"
+    Grid.Column="1" FontFamily="Bodoni MT"/>
+        <DataGrid Grid.Column="1" x:Name="dataGrid" AutoGenerateColumns="False" Margin="40,66,40,46" Background="#F4E9FF">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40" />
+                <DataGridTextColumn Header="Nome Fantasia" Binding="{Binding CPF}" Width="130"/>
+                <DataGridTextColumn Header="Código" Binding="{Binding Nome}" Width="100"/>
+                <DataGridTextColumn Header="Razão social" Binding="{Binding Matricula}" Width="140"/>
+                <DataGridTextColumn Header="CNPJ" Binding="{Binding DataNascimento}" Width="100"/>
+                <DataGridTextColumn Header="Cidade" Binding="{Binding CPF}" Width="100"/>
+                <DataGridTextColumn Header="Estado" Binding="{Binding CPF}" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Sair" Margin="600 380 40 6" Width="100" Height="35" Background="#FFFDCF" 
+                BorderBrush="Transparent" FontSize="18" FontFamily="Bodoni MT" Click="Button_Click_9">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="18" />
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
